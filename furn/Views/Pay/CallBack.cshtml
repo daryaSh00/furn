@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>CallBackAsync</title>
+    <meta charset="utf-8" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <div>
+        <a href="~/Home/index">بازگشت به صفحه اصلی</a>
+    </div>
+
+    <script>
+        var s = '@ViewBag.Success';
+       
+        var m ='@ViewBag.message';
+       
+
+        if (s == "1") {
+
+            swal("عملیات موفق", m, "success");
+
+            window.localStorage.removeItem("basket");
+        }
+        else if(s == "0"){
+
+            swal("عملیات ناموفق", m, "error");
+        }
+
+
+
+    </script>
+</body>
+</html>
